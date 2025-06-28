@@ -1,0 +1,26 @@
+:root {
+  --main-bacground: #fce2ff;
+  --average-bright-bacground: #eacdff;
+  --more-bright-background: #cb81ff;
+  --green-background: #d4fae6;
+  --green-button: #2ae881;
+  --orange: #ff5f00;
+  --black: #201b10;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: none;
+}

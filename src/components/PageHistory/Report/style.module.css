@@ -1,0 +1,38 @@
+.report {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.report__info {
+  display: flex;
+  width: 100%;
+  padding: 18.5px 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--more-bright-background);
+  border-radius: 2.08vw;
+  font-weight: 400;
+  font-size: 1.5625vw;
+  line-height: 100%;
+}
+
+.report__info__document {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  img {
+    width: 27px;
+    height: 22px;
+  }
+}
+
+.report__info__status {
+  display: flex;
+  gap: 8.5px;
+  align-items: center;
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}

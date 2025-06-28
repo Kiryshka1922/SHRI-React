@@ -1,0 +1,40 @@
+.stateContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 10px;
+  column-gap: 39px;
+}
+
+.item {
+  color: var(--black);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 21.25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.item__number {
+  font-weight: 500;
+  font-size: 2.083vw;
+  line-height: 100%;
+}
+
+.item__description {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.042vw;
+  line-height: 100%;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  background-color: #fff;
+}

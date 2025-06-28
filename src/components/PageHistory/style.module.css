@@ -1,0 +1,21 @@
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: var(--more-bright-background);
+  font-size: 1.5625vw;
+}
+
+.groupButton{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

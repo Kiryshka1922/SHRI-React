@@ -1,0 +1,18 @@
+.generate {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  font-size: 1.475vw;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  div {
+    display: flex;
+    gap: 10px;
+  }
+}
