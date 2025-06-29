@@ -13,10 +13,10 @@ export default function getReport(id: string): PropsWriting | null {
 
       return foundReport || null;
     } catch (e) {
-      console.error("������ ��� �������� ������ �� localStorage", e);
+      console.error( e);
       return null;
     }
   } else {
-    return null; // ��� ��������� ������, � ����������� �� ������ ����������
+    return null; 
   }
 }

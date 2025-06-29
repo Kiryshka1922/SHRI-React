@@ -17,6 +17,7 @@ export default function Report({
   isSuccessful,
   onDelete,
   id,
+  testId
 }: typeReport) {
   const [isModal, setModal] = useState<boolean>();
   const handleDelete = () => {
@@ -31,7 +32,7 @@ export default function Report({
   };
 
   return (
-    <div className={style.report} onClick={() => {}}>
+    <div data-testid={testId} className={style.report} onClick={() => {}}>
       <div className={style.report__info} onClick={() => {
         if(isSuccessful){
           setModal(true);
@@ -58,7 +59,7 @@ export default function Report({
           <img src={sad} alt="sad" />
         </div>
       </div>
-      <Button onClick={handleDelete} classes={["cart"]}>
+      <Button testId={`delete-${id}`} onClick={handleDelete} classes={["cart"]}>
         <img src={cart} alt="Cart" />
       </Button>
       {isModal && (

@@ -7,7 +7,6 @@ import Wrapper from "./components/Wrapper/Wrapper";
 
 function App() {
   return (
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Wrapper/>}>
           <Route path="/analytics" element={<Analytic />} />
@@ -15,7 +14,6 @@ function App() {
           <Route path="/history" element={<History/>} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
 }
 

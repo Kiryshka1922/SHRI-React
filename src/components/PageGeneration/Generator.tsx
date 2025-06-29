@@ -19,9 +19,10 @@ export default function Generator() {
     <div className={style.generate}>
       <p>Сгенерируйте готовый csv-файл нажатием одной кнопки</p>
 
-      {loading ? <Loader title="Идет процесс генерации" /> : null}
+      {loading ? <Loader testId="generating-loader" title="Идет процесс генерации" /> : null}
       {error ? (
         <CustomError
+        testId="error"
           title="Упс, не то ..."
           errorTitle="Ошибка"
           onClick={() => {
@@ -32,6 +33,7 @@ export default function Generator() {
 
       {isSuccess ? (
         <Success
+        testId="success"
           title="Файл сгенерирован!"
           buttonTitle="Done!"
           onClick={() => {
@@ -45,6 +47,8 @@ export default function Generator() {
             handleSubmit();
           }}
           classes={["button-send"]}
+          testId="begin-generation"
+          disabled={isSuccess || loading}
         >
           Начать генерацию
         </Button>

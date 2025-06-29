@@ -4,6 +4,7 @@ export type typeReport = {
   isSuccessful: boolean;
   onDelete: () => void;
   id: string;
+  testId?: string;
 };
 
 export type Statistics = {

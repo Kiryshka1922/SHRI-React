@@ -11,7 +11,7 @@ import close from "./../../../public/images/cross-cancel.svg";
 import Statistic from "./Statistics/Statistics";
 import style from "./style.module.css";
 
-const ACCEPTED_FILE_TYPES = [
+export const ACCEPTED_FILE_TYPES = [
   "text/csv",
   "application/csv",
   "application/vnd.ms-excel",
@@ -128,6 +128,7 @@ export default function Analytic() {
           <span>полную информацию</span> о нём за сверхнизкое время
         </p>
         <div
+        data-testid="dropzone"
           className={style.menu__settings__dropzone}
           style={
             validate
@@ -150,7 +151,7 @@ export default function Analytic() {
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
         >
-          {loading ? <Loader title="идет парсинг файла" /> : null}
+          {loading ? <Loader testId="loader" title="идет парсинг файла" /> : null}
           {error ? (
             <CustomError
               title={"Ошибка при парсинге"}
@@ -202,7 +203,7 @@ export default function Analytic() {
                           <img src={close} alt="close" />
                         </Button>
                       </div>
-                      <span>файл загружен!</span>
+                      <span data-testid="success">файл загружен!</span>
                     </div>
                   ) : (
                     <>
@@ -225,6 +226,7 @@ export default function Analytic() {
           disabled={validate || !file || loading || isSuccess}
           classes={["button-send"]}
           onClick={handleSubmit}
+          testId="send"
         >
           Отправить
         </Button>

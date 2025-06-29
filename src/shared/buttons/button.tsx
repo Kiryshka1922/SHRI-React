@@ -8,6 +8,7 @@ type Props = {
   disabled?: boolean;
   classes?: (keyof typeof styles | string)[];
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  testId?: string;
 };
 
 export default function Button({
@@ -15,6 +16,7 @@ export default function Button({
   disabled = false,
   onClick,
   classes = [],
+  testId
 }: Props) {
   const buttonClass = classNames(
     styles.button,
@@ -25,7 +27,7 @@ export default function Button({
   );
 
   return (
-    <button onClick={onClick} className={buttonClass} disabled={disabled}>
+    <button onClick={onClick} className={buttonClass} disabled={disabled} data-testid={testId}>
       {children}
     </button>
   );

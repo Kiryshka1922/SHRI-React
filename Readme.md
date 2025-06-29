@@ -20,7 +20,7 @@ Homework
 ├── package.json                # Зависимости и скрипты проекта
 ├── tsconfig.json               # Конфигурация TypeScript
 └── vite.config.ts              # Конфигурация Vite для сборки
-
+```
 
 ```bash
 # 1. Клонируйте репозиторий

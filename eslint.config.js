@@ -11,12 +11,16 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.jest, 
+      },
     },
     plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
-      import: eslintPluginImport,
+      "import": eslintPluginImport,
+      "jest": jestPlugin, 
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -28,20 +32,19 @@ export default tseslint.config(
         "error",
         {
           groups: [
-            "builtin", // ���������� ������ (node:fs, node:path)
-            "external", // ������� ����������� (react, lodash)
-            "internal", // ���������� ���� (src/utils)
-            "parent", // ������������ ���������� (../components)
-            "sibling", // ������� ���������� (./styles)
-            "index", // index-����� (./index)
-            "object", // �������-������� (import * as React)
-            "type", // ������� ����� (import type ...)
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+            "object",
+            "type",
           ],
-          "newlines-between": "always", // ������ ������ ����� ��������
+          "newlines-between": "always",
           alphabetize: {
-            // ���������� ������ �����
-            order: "asc", // �� ����������� (a -> z)
-            caseInsensitive: true, // ������������ �������
+            order: "asc",
+            caseInsensitive: true,
           },
         },
       ],

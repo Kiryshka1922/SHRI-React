@@ -28,9 +28,10 @@ export default function History() {
 
   if (!reports.length) {
     return (
-      <div className={style.message}>
+      <div data-testid='defolt' className={style.message}>
         <span>Записей пока нет</span>
         <Button
+          testId="toGenerate"
           classes={["button-send"]}
           onClick={() => {
             navigate("/generate");
@@ -46,6 +47,7 @@ export default function History() {
     <div className={style.historyList}>
       {reports.map((report, index) => (
         <Report
+        testId={`report-${report.id}`}
           id={report.id}
           key={index}
           onDelete={handleRefresh}
@@ -55,7 +57,7 @@ export default function History() {
         />
       ))}
       <div className={style.groupButton}>
-        <Button classes={['button-send']} onClick={() => {
+        <Button testId="toGenerate" classes={['button-send']} onClick={() => {
           navigate("/generate");
         }}>
           Сгенерировать больше 
@@ -63,7 +65,9 @@ export default function History() {
         <Button classes={['close']} onClick={() => {
             clearHistory();
             setReports([]);
-          }}>
+          }}
+          testId="clear-all"
+          >
           Очистить все
         </Button>
 

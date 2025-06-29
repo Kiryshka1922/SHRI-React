@@ -35,7 +35,7 @@ export default function Wrapper() {
             <img src={upload} alt="Аналитик" />
             <span>CSV Аналитик</span>
             {direction == "analytics" ? (
-              <div className={style.underlined} />
+              <div data-testid="line-analytic" className={style.underlined} />
             ) : null}
           </div>
           <div
@@ -48,7 +48,7 @@ export default function Wrapper() {
             <img src={generate} alt="Генератор CSV" />
             <span>CSV Генератор</span>
             {direction == "generate" ? (
-              <div className={style.underlined} />
+              <div data-testid="line-generating" className={style.underlined} />
             ) : null}
           </div>
           <div
@@ -61,7 +61,7 @@ export default function Wrapper() {
             <img src={history} alt="История" />
             <span>История</span>
             {direction == "history" ? (
-              <div className={style.underlined} />
+              <div data-testid="line-history" className={style.underlined} />
             ) : null}
           </div>
         </div>
